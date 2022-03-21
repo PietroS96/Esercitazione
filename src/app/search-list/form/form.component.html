@@ -1,0 +1,16 @@
+<div class="input-group mt-5 d-flex justify-content-center">
+  <form #f="ngForm" (ngSubmit)="submitName(f)">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Inserire nome..."
+      name="name"
+      ngModel
+      required
+      minlength="1"
+    />
+    <button [disabled]="f.invalid" class="btn btn-success ms-5 mt-5">
+      Ricerca
+    </button>
+  </form>
+</div>

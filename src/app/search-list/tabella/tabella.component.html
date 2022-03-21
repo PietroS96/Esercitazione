@@ -1,0 +1,21 @@
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Genere</th>
+      <th scope="col">Probabilità</th>
+      <th scope="col">Contatore</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gender of dataGender; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ gender.name }}</td>
+      <td>{{ gender.gender }}</td>
+      <td>{{ gender.probability }}</td>
+      <td>{{ gender.count }}</td>
+      <button class="btn btn-warning" (click)="deleteRow(i)">Elimina</button>
+    </tr>
+  </tbody>
+</table>
